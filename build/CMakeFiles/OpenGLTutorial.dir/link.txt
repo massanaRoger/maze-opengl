@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/OpenGLTutorial.dir/src/main.cpp.o CMakeFiles/OpenGLTutorial.dir/src/Shader.cpp.o CMakeFiles/OpenGLTutorial.dir/src/stb_image.cpp.o -o OpenGLTutorial  libglad.a /usr/lib/libglfw.so.3.4

@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/roger/Documents/programming/maze-opengl/build",
+  "command": "/usr/bin/cc  -I/home/roger/Documents/programming/maze-opengl/vendor/glad/include -I/home/roger/Documents/programming/maze-opengl/includes  -o CMakeFiles/glad.dir/vendor/glad/src/glad.c.o -c /home/roger/Documents/programming/maze-opengl/vendor/glad/src/glad.c",
+  "file": "/home/roger/Documents/programming/maze-opengl/vendor/glad/src/glad.c",
+  "output": "CMakeFiles/glad.dir/vendor/glad/src/glad.c.o"
+},
+{
+  "directory": "/home/roger/Documents/programming/maze-opengl/build",
+  "command": "/usr/bin/c++  -I/home/roger/Documents/programming/maze-opengl/includes -I/home/roger/Documents/programming/maze-opengl/vendor/glad/include -std=gnu++11 -o CMakeFiles/OpenGLTutorial.dir/src/main.cpp.o -c /home/roger/Documents/programming/maze-opengl/src/main.cpp",
+  "file": "/home/roger/Documents/programming/maze-opengl/src/main.cpp",
+  "output": "CMakeFiles/OpenGLTutorial.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/roger/Documents/programming/maze-opengl/build",
+  "command": "/usr/bin/c++  -I/home/roger/Documents/programming/maze-opengl/includes -I/home/roger/Documents/programming/maze-opengl/vendor/glad/include -std=gnu++11 -o CMakeFiles/OpenGLTutorial.dir/src/Shader.cpp.o -c /home/roger/Documents/programming/maze-opengl/src/Shader.cpp",
+  "file": "/home/roger/Documents/programming/maze-opengl/src/Shader.cpp",
+  "output": "CMakeFiles/OpenGLTutorial.dir/src/Shader.cpp.o"
+},
+{
+  "directory": "/home/roger/Documents/programming/maze-opengl/build",
+  "command": "/usr/bin/c++  -I/home/roger/Documents/programming/maze-opengl/includes -I/home/roger/Documents/programming/maze-opengl/vendor/glad/include -std=gnu++11 -o CMakeFiles/OpenGLTutorial.dir/src/stb_image.cpp.o -c /home/roger/Documents/programming/maze-opengl/src/stb_image.cpp",
+  "file": "/home/roger/Documents/programming/maze-opengl/src/stb_image.cpp",
+  "output": "CMakeFiles/OpenGLTutorial.dir/src/stb_image.cpp.o"
+}
+]

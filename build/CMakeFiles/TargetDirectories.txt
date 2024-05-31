@@ -1,0 +1,4 @@
+/home/roger/Documents/programming/maze-opengl/build/CMakeFiles/glad.dir
+/home/roger/Documents/programming/maze-opengl/build/CMakeFiles/OpenGLTutorial.dir
+/home/roger/Documents/programming/maze-opengl/build/CMakeFiles/edit_cache.dir
+/home/roger/Documents/programming/maze-opengl/build/CMakeFiles/rebuild_cache.dir
