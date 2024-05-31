@@ -1,9 +1,15 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
+#include "glm/ext/vector_float3.hpp"
 #include <glad/glad.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+
+struct CollisionInfo {
+    bool collisionX;
+    bool collisionZ;
+};
 
 // Defines several possible options for camera movement. Used as abstraction to stay away from window-system specific input methods
 enum Camera_Movement {
@@ -81,11 +87,19 @@ public:
         if (direction == RIGHT)
             newPosition += Right * velocity;
         // Check for collisions before updating the position
-        if (!checkCollision(newPosition, maze, mazeWidth, mazeHeight, tileSize))
-        {
+        CollisionInfo collisionResult = CheckCollision(newPosition, maze, mazeWidth, mazeHeight, tileSize);
+        if (collisionResult.collisionX && collisionResult.collisionZ) {
+            return;
+        }
+        if (collisionResult.collisionX) {
+            Position = glm::vec3(Position.x, newPosition.y, newPosition.z);
+        }
+        else if (collisionResult.collisionZ) {
+            Position = glm::vec3(newPosition.x, newPosition.y, Position.z);
+        }
+        else {
             Position = newPosition;
         }
-
     }
 
     // processes input received from a mouse input system. Expects the offset value in both the x and y direction.
@@ -135,21 +149,35 @@ private:
         Up    = glm::normalize(glm::cross(Right, Front));
     }
 
-    bool checkCollision(glm::vec3 newPosition, const int maze[10][10], int mazeWidth, int mazeHeight, float tileSize) {
+    CollisionInfo CheckCollision(glm::vec3 newPosition, const int maze[10][10], int mazeWidth, int mazeHeight, float tileSize) {
         // Convert the player's new position to maze grid coordinates
         int x = static_cast<int>((newPosition.x + collisionMargin) / tileSize);
         int z = static_cast<int>((newPosition.z + collisionMargin) / tileSize);
         int xMinus = static_cast<int>((newPosition.x - collisionMargin) / tileSize);
         int zMinus = static_cast<int>((newPosition.z - collisionMargin) / tileSize);
 
+        CollisionInfo info = { false, false };
+
         // Check if the new position is within the bounds of the maze
         if (x >= 0 && x < mazeWidth && z >= 0 && z < mazeHeight && xMinus >= 0 && xMinus < mazeWidth && zMinus >= 0 && zMinus < mazeHeight) {
-            // Check if the new position collides with a wall
-            return maze[z][x] == 1 || maze[zMinus][x] == 1 || maze[z][xMinus] == 1 || maze[zMinus][xMinus] == 1;
+            // Check for X axis collisions
+            if (maze[static_cast<int>(newPosition.z / tileSize)][x] == 1 || maze[static_cast<int>(newPosition.z / tileSize)][xMinus] == 1) {
+                info.collisionX = true;
+            }
+
+            // Check for Z axis collisions
+            if (maze[z][static_cast<int>(newPosition.x / tileSize)] == 1 || maze[zMinus][static_cast<int>(newPosition.x / tileSize)] == 1) {
+                info.collisionZ = true;
+            }
+        } else {
+            info.collisionX = true; // If out of bounds, treat as collision
+            info.collisionZ = true; // If out of bounds, treat as collision
         }
 
-        return true; // If out of bounds, treat as collision
+        return info;
     }
+
+   
 
 };
 #endif
