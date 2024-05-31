@@ -394,15 +394,6 @@ CMakeFiles/OpenGLTutorial.dir/src/Shader.cpp.o: /home/roger/Documents/programmin
   /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdint.h
 
 CMakeFiles/OpenGLTutorial.dir/src/main.cpp.o: /home/roger/Documents/programming/maze-opengl/src/main.cpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/_fixes.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/func_integer.inl \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/func_packing.inl \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/setup.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_half.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_half.inl \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/setup.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_mat2x2.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_mat2x2.inl \
   /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_mat2x3.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_mat2x3.inl \
   /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_mat2x4.hpp \
@@ -417,15 +408,8 @@ CMakeFiles/OpenGLTutorial.dir/src/main.cpp.o: /home/roger/Documents/programming/
   /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_mat4x2.inl \
   /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_mat4x3.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_mat4x3.inl \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_vec2.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_vec2.inl \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_vec3.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_vec3.inl \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/setup.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/scalar_int_sized.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/scalar_uint_sized.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_double2x2.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_double2x2_precision.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_mat4x4.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_mat4x4.inl \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_double2x3.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_double2x3_precision.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_double2x4.hpp \
@@ -442,8 +426,6 @@ CMakeFiles/OpenGLTutorial.dir/src/main.cpp.o: /home/roger/Documents/programming/
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_double4x3_precision.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_double4x4.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_double4x4_precision.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_float2x2.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_float2x2_precision.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_float2x3.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_float2x3_precision.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_float2x4.hpp \
@@ -458,7 +440,52 @@ CMakeFiles/OpenGLTutorial.dir/src/main.cpp.o: /home/roger/Documents/programming/
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_float4x2_precision.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_float4x3.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_float4x3_precision.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_float4x4.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_float4x4_precision.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/common.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/func_vector_relational.inl \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/setup.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/vector_relational.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/_fixes.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/_vectorize.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/compute_common.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/func_common.inl \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/func_exponential.inl \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/setup.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_vec1.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_vec1.inl \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/exponential.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/func_geometric.inl \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/geometric.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/func_matrix.inl \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/setup.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/mat2x3.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/mat2x4.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/mat3x2.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/mat3x3.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/mat3x4.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/mat4x2.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/mat4x3.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/mat4x4.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/matrix.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/compute_vector_relational.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/setup.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/setup.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_mat2x2.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_mat2x2.inl \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_vec2.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_vec2.inl \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_vec3.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_vec3.inl \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_vec4.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_vec4.inl \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/setup.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/scalar_int_sized.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/scalar_uint_sized.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_double2x2.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_double2x2_precision.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_float2x2.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_float2x2_precision.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/vector_bool2.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/vector_bool2_precision.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/vector_bool3.hpp \
@@ -489,60 +516,28 @@ CMakeFiles/OpenGLTutorial.dir/src/main.cpp.o: /home/roger/Documents/programming/
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/vector_uint3_sized.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/vector_uint4.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/vector_uint4_sized.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/common.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/func_vector_relational.inl \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/setup.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/vector_relational.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/_fixes.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/_vectorize.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/compute_common.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/func_common.inl \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/func_exponential.inl \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/setup.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_vec1.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_vec1.inl \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/exponential.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/func_geometric.inl \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/geometric.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/func_matrix.inl \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/setup.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/mat2x2.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/mat2x3.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/mat2x4.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/mat3x2.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/mat3x3.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/mat3x4.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/mat4x2.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/mat4x3.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/mat4x4.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/matrix.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/simd/platform.h \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/vec2.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/vec3.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/vec4.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/compute_vector_relational.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/_fixes.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/func_integer.inl \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/func_packing.inl \
   /home/roger/Documents/programming/maze-opengl/includes/glm/detail/func_trigonometric.inl \
   /home/roger/Documents/programming/maze-opengl/includes/glm/detail/qualifier.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/detail/setup.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_mat4x4.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_mat4x4.inl \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_vec4.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_vec4.inl \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_half.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/detail/type_half.inl \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/fwd.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/glm.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/detail/setup.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/scalar_constants.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/scalar_constants.inl \
   /home/roger/Documents/programming/maze-opengl/includes/glm/gtc/constants.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/gtc/constants.inl \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/trigonometric.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_float4x4.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_transform.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_transform.inl \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/fwd.hpp \
-  /home/roger/Documents/programming/maze-opengl/includes/glm/glm.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_clip_space.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_clip_space.inl \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_projection.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_projection.inl \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_transform.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/ext/matrix_transform.inl \
   /home/roger/Documents/programming/maze-opengl/includes/glm/detail/setup.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/quaternion_relational.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/ext/quaternion_relational.inl \
@@ -584,7 +579,13 @@ CMakeFiles/OpenGLTutorial.dir/src/main.cpp.o: /home/roger/Documents/programming/
   /home/roger/Documents/programming/maze-opengl/includes/glm/gtc/type_ptr.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/gtc/type_ptr.inl \
   /home/roger/Documents/programming/maze-opengl/includes/glm/integer.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/mat2x2.hpp \
   /home/roger/Documents/programming/maze-opengl/includes/glm/packing.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/trigonometric.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/vec2.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/vec3.hpp \
+  /home/roger/Documents/programming/maze-opengl/includes/glm/vec4.hpp \
+  /home/roger/Documents/programming/maze-opengl/src/Camera.hpp \
   /home/roger/Documents/programming/maze-opengl/src/Shader.hpp \
   /home/roger/Documents/programming/maze-opengl/src/stb_image.hpp \
   /home/roger/Documents/programming/maze-opengl/vendor/glad/include/KHR/khrplatform.h \
@@ -943,6 +944,8 @@ CMakeFiles/OpenGLTutorial.dir/src/stb_image.cpp.o: /home/roger/Documents/program
 /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stdarg.h:
 
 /usr/include/bits/posix1_lim.h:
+
+/home/roger/Documents/programming/maze-opengl/src/Camera.hpp:
 
 /usr/include/wchar.h:
 
