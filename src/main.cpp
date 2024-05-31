@@ -23,9 +23,10 @@ unsigned int generateTexture();
 // settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
+const float TILE_SIZE = 1.0f;
 
 // camera
-Camera camera(glm::vec3(1.0f, 0.0f, 1.0f));
+Camera camera(glm::vec3(1.5f, 0.0f, 1.5f));
 float lastX = SCR_WIDTH / 2.0f;
 float lastY = SCR_HEIGHT / 2.0f;
 bool firstMouse = true;
@@ -33,10 +34,6 @@ bool firstMouse = true;
 // timing
 float deltaTime = 0.0f;	// time between current frame and last frame
 float lastFrame = 0.0f;
-
-glm::vec3 cameraPos   = glm::vec3(0.0f, 0.0f,  3.0f);
-glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
-glm::vec3 cameraUp    = glm::vec3(0.0f, 1.0f,  0.0f);
 
 int maze[10][10] = {
     {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
@@ -127,7 +124,7 @@ int main() {
                     continue;
                 }
                 glm::mat4 model = glm::mat4(1.0f);
-                glm::vec3 vector = glm::vec3(i, 0.0f, j);
+                glm::vec3 vector = glm::vec3(i + 0.5f, 0.0f, j + 0.5f);
                 // model = glm::rotate(model, glm::radians(90.0f), glm::normalize(glm::vec3(0.0f, 1.0f, 0.0f)));
                 model = glm::translate(model, vector);
                 shader.setMat4("model", model);
@@ -152,13 +149,13 @@ void processInput(GLFWwindow *window)
         glfwSetWindowShouldClose(window, true);
 
     if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
-        camera.ProcessKeyboard(FORWARD, deltaTime);
+        camera.ProcessKeyboard(FORWARD, deltaTime, maze, 10, 10, TILE_SIZE);
     if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
-        camera.ProcessKeyboard(BACKWARD, deltaTime);
+        camera.ProcessKeyboard(BACKWARD, deltaTime, maze, 10, 10, TILE_SIZE);
     if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
-        camera.ProcessKeyboard(LEFT, deltaTime);
+        camera.ProcessKeyboard(LEFT, deltaTime, maze, 10, 10, TILE_SIZE);
     if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
-        camera.ProcessKeyboard(RIGHT, deltaTime);
+        camera.ProcessKeyboard(RIGHT, deltaTime, maze, 10, 10, TILE_SIZE);
 }
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes

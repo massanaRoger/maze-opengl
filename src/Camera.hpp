@@ -38,10 +38,11 @@ public:
     float MovementSpeed;
     float MouseSensitivity;
     float Zoom;
+    float collisionMargin;
 
     // constructor with vectors
-    Camera(glm::vec3 position = glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f), float yaw = YAW, float pitch = PITCH) : Front(glm::vec3(0.0f, 0.0f, -1.0f)), MovementSpeed(SPEED), MouseSensitivity(SENSITIVITY), Zoom(ZOOM)
-    {
+    Camera(glm::vec3 position = glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f), float yaw = YAW, float pitch = PITCH, float margin = 0.12f) 
+        : Front(glm::vec3(0.0f, 0.0f, -1.0f)), MovementSpeed(SPEED), MouseSensitivity(SENSITIVITY), Zoom(ZOOM), collisionMargin(margin) {
         Position = position;
         WorldUp = up;
         Yaw = yaw;
@@ -49,8 +50,8 @@ public:
         updateCameraVectors();
     }
     // constructor with scalar values
-    Camera(float posX, float posY, float posZ, float upX, float upY, float upZ, float yaw, float pitch) : Front(glm::vec3(0.0f, 0.0f, -1.0f)), MovementSpeed(SPEED), MouseSensitivity(SENSITIVITY), Zoom(ZOOM)
-    {
+    Camera(float posX, float posY, float posZ, float upX, float upY, float upZ, float yaw, float pitch, float margin = 0.12f) 
+        : Front(glm::vec3(0.0f, 0.0f, -1.0f)), MovementSpeed(SPEED), MouseSensitivity(SENSITIVITY), Zoom(ZOOM), collisionMargin(margin) {
         Position = glm::vec3(posX, posY, posZ);
         WorldUp = glm::vec3(upX, upY, upZ);
         Yaw = yaw;
@@ -65,19 +66,26 @@ public:
     }
 
     // processes input received from any keyboard-like input system. Accepts input parameter in the form of camera defined ENUM (to abstract it from windowing systems)
-    void ProcessKeyboard(Camera_Movement direction, float deltaTime)
+    void ProcessKeyboard(Camera_Movement direction, float deltaTime, const int maze[10][10], int mazeWidth, int mazeHeight, float tileSize)
     {
         float velocity = MovementSpeed * deltaTime;
         glm::vec3 horizontalFront = glm::normalize(glm::vec3(Front.x, 0.0f, Front.z));  // Movement only in the XZ plane
+        glm::vec3 newPosition = Position;
 
         if (direction == FORWARD)
-            Position += horizontalFront * velocity;
+            newPosition += horizontalFront * velocity;
         if (direction == BACKWARD)
-            Position -= horizontalFront * velocity;
+            newPosition -= horizontalFront * velocity;
         if (direction == LEFT)
-            Position -= Right * velocity;
+            newPosition -= Right * velocity;
         if (direction == RIGHT)
-            Position += Right * velocity;
+            newPosition += Right * velocity;
+        // Check for collisions before updating the position
+        if (!checkCollision(newPosition, maze, mazeWidth, mazeHeight, tileSize))
+        {
+            Position = newPosition;
+        }
+
     }
 
     // processes input received from a mouse input system. Expects the offset value in both the x and y direction.
@@ -126,5 +134,22 @@ private:
         Right = glm::normalize(glm::cross(Front, WorldUp));  // normalize the vectors, because their length gets closer to 0 the more you look up or down which results in slower movement.
         Up    = glm::normalize(glm::cross(Right, Front));
     }
+
+    bool checkCollision(glm::vec3 newPosition, const int maze[10][10], int mazeWidth, int mazeHeight, float tileSize) {
+        // Convert the player's new position to maze grid coordinates
+        int x = static_cast<int>((newPosition.x + collisionMargin) / tileSize);
+        int z = static_cast<int>((newPosition.z + collisionMargin) / tileSize);
+        int xMinus = static_cast<int>((newPosition.x - collisionMargin) / tileSize);
+        int zMinus = static_cast<int>((newPosition.z - collisionMargin) / tileSize);
+
+        // Check if the new position is within the bounds of the maze
+        if (x >= 0 && x < mazeWidth && z >= 0 && z < mazeHeight && xMinus >= 0 && xMinus < mazeWidth && zMinus >= 0 && zMinus < mazeHeight) {
+            // Check if the new position collides with a wall
+            return maze[z][x] == 1 || maze[zMinus][x] == 1 || maze[z][xMinus] == 1 || maze[zMinus][xMinus] == 1;
+        }
+
+        return true; // If out of bounds, treat as collision
+    }
+
 };
 #endif
